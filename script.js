@@ -179,9 +179,7 @@ const cotdg1 = {
     index: 0,
     gallery: ["images/cotd1.png",
         "images/cotd3.png",
-        "images/cotd4.png",
-        "images/cotd2.png",
-        "images/cotd5.png"],
+        "images/cotd4.png"],
     img: document.getElementById('cotdg1img'),
     lBtn: document.getElementById('cotdg1LBtn'),
     rBtn: document.getElementById('cotdg1RBtn')
@@ -219,9 +217,8 @@ let cotdGallery1Timer = setInterval(() => {
 
 const cotdg2 = {
     index: 0,
-    gallery: ["images/tentacle.gif",
-        "images/upgrade.gif",
-        "images/Miasma.gif"],
+    gallery: ["images/cotd2.png",
+        "images/cotd5.png"],
     img: document.getElementById('cotdg2img'),
     lBtn: document.getElementById('cotdg2LBtn'),
     rBtn: document.getElementById('cotdg2RBtn')
@@ -262,7 +259,7 @@ const opg1 = {
     gallery: ["images/zbm1.png",
         "images/zbm2.png",
         "images/zbm3.png",
-        "images/zbm4.gif"],
+        "gifs/zbm4.gif"],
     img: document.getElementById('opg1img'),
     lBtn: document.getElementById('opg1LBtn'),
     rBtn: document.getElementById('opg1RBtn')
