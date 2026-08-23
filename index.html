@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>asherj.dev</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <div class="contentContainer">
+
+        <div class="imgbox">
+            <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages\AsherJImg2Cropped.jpg" alt="Asher Johnston" class="bgHeader">
+        </div>
+
+        <h1>Asher Johnston</h1>
+        <h2>Gameplay Programmer + Experience Designer</h2>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+            <button class="tablinks" onclick="openTab(event, 'ProjectPage')">Projects</button>
+            <button class="tablinks" onclick="openTab(event, 'AboutMe')">About Me</button>
+        </div>
+
+        <div id="AboutMe" class="tabcontent" style="display:block">
+            <div class="aboutMe">
+                <p class="aboutMeHeader">About Me</p>
+                <p class="leftText">Hi! I'm Asher. I'm a full time student at QUT at present, studying the bachelor of games and interactive environments. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages\AsherJImg1.jpg" alt="Asher Johnston" class="profilePic">
+                <p class="socialsText">Connect with me!</p>
+                <div class="socialsContainer">
+                    <p> <a href="https://www.linkedin.com/in/asherjdev/"><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/LinkedIn.png" alt="My LinkedIn" class="appImage linkedIn"></a></p>
+                    <p> <a href="https://trapp44.itch.io/"><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/itchio.png" alt="My Itch.io" class="appImage itch"></a></p>
+                    <p> <a href="mailto:ashervjohnston@gmail.com"><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/email.png" alt="Email me" class="appImage email"></a></p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="ProjectPage" class="tabcontent" style="display:none">
+            <h3>My Projects</h3>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openSubTab(event, 'OtherTab')">Other Projects</button>
+                <button class="tablinks" onclick="openSubTab(event, 'COTDTab')">Cult Of The Devourer</button>
+                <button class="tablinks" onclick="openSubTab(event, 'AuroraArtistryTab')">Aurora Artistry</button>
+                <button class="tablinks" onclick="openSubTab(event, 'PantryPanicTab')">Pantry Panic</button>
+            </div>
+
+            <div id="PantryPanicTab" class="subtabcontent" style="display:block">
+                <div class="projectContainer">
+                    <p class="projectName">Pantry Panic</p>
+                    <p class="projectSummary">
+                        Take up the mantle of being a new chef at Glorberto's diner, the hottest spot in the galaxy to grab a bite to eat!
+                        Pantry Panic is a fast paced VR game that aims to mimic the frantic feeling of a real-world kitchen with a hefty
+                        dose of sci-fi goofiness thrown into the mix.
+                    </p>
+                    <img id="ppg1img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/pp1_1.png" alt="Gallery Image" class="projectImgBox1">
+                    <button id="ppg1LBtn" class="cycleButton imgCycleButtonL imgBox1Button"><</button>
+                    <button id="ppg1RBtn" class="cycleButton imgCycleButtonR imgBox1Button">></button>
+
+                    <p class="projectContributions">
+                        My principal role for this project was as a backend systems programmer, principally for the order system,
+                        which generates orders for the player to complete, as well as the order checking logic, which makes sure
+                        the orders the player submits are correct. I also worked on the implementation of the sound effects and
+                        the chef's dialogue system, which serves as the game's primary tutorialisation.
+                    </p>
+                    <img id="ppg2img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/pp2_1.png" alt="Gallery Image" class="projectImgBox2">
+                    <button id="ppg2LBtn" class="cycleButton imgCycleButtonL imgBox2Button"><</button>
+                    <button id="ppg2RBtn" class="cycleButton imgCycleButtonR imgBox2Button">></button>
+
+                    <p class="conclusionText">
+                        This project was made as a part of QUT's IGB388: Design and Development of Immersive Environments unit,
+                        and was developed over the course of approximately 2 months, using the Unity Game Engine and Microsoft Visual Studio,
+                        with programming conducted in C#.
+                    </p>
+
+                    <div class="projectLinksContainer2x2">
+                        <p> <a href="https://asht421.itch.io/pantry-panic"><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/PantryPanicLogo.png" alt="Play Pantry Panic" class="appImage ppItchPage"></a></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/VSLogo.png" alt="Visual Studio" class="appImage vsLogo"></p>
+                        <p><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/UnityLogo.png" alt="Unity" class="appImage unityLogo"></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/CSharpLogo.png" alt="C#" class="appImage cSharpLogo"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="AuroraArtistryTab" class="subtabcontent" style="display:none">
+                <div class="projectContainer">
+                    <p class="projectName">Aurora Artistry</p>
+
+                    <p class="projectSummary">
+                        <br />
+                        Gather crystals from a free-flowing stream and place them as you please upon your cosmic canvas in Aurora Artistry,
+                        a game-like experience created in partnership with the Queensland Gallery of Modern Art. Once the crystals have been arranged,
+                        illuminate them with the light button, and watch your arrangement come to glowing life. Players may then share their illuminated
+                        creation to the Galactic Gallery, an online collection of other players artworks.
+                    </p>
+                    <img id="aag1img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/aa1.png" alt="Gallery Image" class="projectImgBox1">
+                    <button id="aag1LBtn" class="cycleButton imgCycleButtonL imgBox1Button cycleButtonLight"><</button>
+                    <button id="aag1RBtn" class="cycleButton imgCycleButtonR imgBox1Button cycleButtonLight">></button>
+
+                    <p class="projectContributions">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <img id="aag2img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/gg1.jpg" alt="Gallery Image" class="projectImgBox2">
+                    <button id="aag2LBtn" class="cycleButton imgCycleButtonL imgBox2Button cycleButtonLight"><</button>
+                    <button id="aag2RBtn" class="cycleButton imgCycleButtonR imgBox2Button cycleButtonLight">></button>
+
+                    <p class="conclusionText">
+                        This project was made as a part of QUT's IGB200: Game Studio 2: Applied Game Development,
+                        and was developed over the course of approximately 2 months. Development was carried out in the Unity Game Engine,
+                        making use of C# and Microsoft Visual Studio. The backend for the Galactic Gallery is hosted with Firebase,
+                        and the functionality of the website is enabled with Javascript, tied into an HTML5 frontend.
+                    </p>
+
+                    <div class="projectLinksContainer2x3">
+                        <p> <a href="https://trapp44.itch.io/aurora-artistry"><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/AALogo.png" alt="Play Aurora Artistry" class="appImage aaItchPage"></a></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/VSLogo.png" alt="Visual Studio" class="appImage vsLogo"></p>
+                        <p><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/UnityLogo.png" alt="Unity" class="appImage unityLogo unityLogo2x3"></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/CSharpLogo.png" alt="C#" class="appImage cSharpLogo"></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/jsLogo.png" alt="Javascript" class="appImage jsLogo"></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/fbLogo.png" alt="Firebase" class="appImage fbLogo"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="COTDTab" class="subtabcontent" style="display:none">
+                <div class="projectContainer">
+                    <p class="projectName">Cult Of The Devourer</p>
+
+                    <p class="projectSummary">
+                        <br />
+                        Travelling through the bleak darklands, embody a parasite - an ancient, insatiable force puppeteering a human
+                        host with only one goal in mind: to devour. In a world where Vampire Survivors collides with cosmic horror,
+                        with every life consumed, you mutate further beyond humanity into gloriously hideous forms. While avoiding
+                        the townspeople’s desperate attempts to kill you, fuel your undying hunger by slaughtering and consuming your
+                        enemies to achieve your ultimate monstrous ascension.
+                    </p>
+                    <img id="cotdg1img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/cotd1.png" alt="Gallery Image" class="projectImgBox1">
+                    <button id="cotdg1LBtn" class="cycleButton imgCycleButtonL imgBox1Button cycleButtonLight"><</button>
+                    <button id="cotdg1RBtn" class="cycleButton imgCycleButtonR imgBox1Button cycleButtonLight">></button>
+
+                    <p class="projectContributions">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <img id="cotdg2img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/cotd2.png" alt="Gallery Image" class="projectImgBox2">
+                    <button id="cotdg2LBtn" class="cycleButton imgCycleButtonL imgBox2Button cycleButtonLight"><</button>
+                    <button id="cotdg2RBtn" class="cycleButton imgCycleButtonR imgBox2Button cycleButtonLight">></button>
+
+                    <p class="conclusionText">
+                        This project was made as a part of QUT's IGB100: Game Studio 1: Mini-Game Development,
+                        and was developed over the course of approximately 2 months. Development was carried out in the Unity Game Engine,
+                        making use of C# and Microsoft Visual Studio. Audacity was also used for the modulation of sound effects included in the game.
+                    </p>
+
+                    <div class="projectLinksContainer2x3">
+                        <p> <a href="https://xavier-mackay.itch.io/cult-of-the-devourer"><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/cotdLogo.png" alt="Play Cult Of The Devourer" class="appImage aaItchPage"></a></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/VSLogo.png" alt="Visual Studio" class="appImage vsLogo"></p>
+                        <p><img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/UnityLogo.png" alt="Unity" class="appImage unityLogo unityLogo2x3"></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/CSharpLogo.png" alt="C#" class="appImage cSharpLogo"></p>
+                        <p> <img src="gs://asherjportfolio.firebasestorage.app/portfolioImages/AudacityLogo.png" alt="Audacity" class="appImage jsLogo"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="OtherTab" class="subtabcontent" style="display:none">
+                <div class="projectContainer">
+                    <p class="projectName">Other Projects</p>
+
+                    <p class="projectSummary">
+                        <br />
+                        At ZomBMart, customer service is the number 1 priority, whether or not those customers have exposed brains. ZomBMart is a 2-4 player
+                        couch co-op, where players must strive to keep the customer satisfaction meter running high, while also earning as many points
+                        as they can, to become employee of the day. This is an ongoing project, developed as part of my QUT BGIE Capstone, with release planned
+                        for early November. My main role on this project has been handling ragdolling for players, as well as managing in-between-round logic,
+                        and the related upgrade menu. This project is being developed in Unreal Engine 5, making use of blueprints, with version control handled via Github.
+                    </p>
+                    <img id="opg1img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/ZBM1.png" alt="Gallery Image" class="projectImgBox1">
+                    <button id="opg1LBtn" class="cycleButton imgCycleButtonL imgBox1Button"><</button>
+                    <button id="opg1RBtn" class="cycleButton imgCycleButtonR imgBox1Button">></button>
+
+                    <p class="projectContributions">
+                        Grainnihilation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <img id="opg2img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/Grain1.png" alt="Gallery Image" class="projectImgBox2">
+                    <button id="opg2LBtn" class="cycleButton imgCycleButtonL imgBox2Button cycleButtonLight"><</button>
+                    <button id="opg2RBtn" class="cycleButton imgCycleButtonR imgBox2Button cycleButtonLight">></button>
+                </div>
+                <div class="projectContainer">
+                    <p class="projectSummary">
+                        <br />
+                        Blight Of Pumpkin Manor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <img id="opg3img" src="gs://asherjportfolio.firebasestorage.app/portfolioImages/bopm1.png" alt="Gallery Image" class="projectImgBox1">
+                    <button id="opg3LBtn" class="cycleButton imgCycleButtonL imgBox1Button cycleButtonLight"><</button>
+                    <button id="opg3RBtn" class="cycleButton imgCycleButtonR imgBox1Button cycleButtonLight">></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="Resume" class="tabcontent" style="display:none">
+            <h3>Resume</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+</body>
+</html>

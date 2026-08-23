@@ -1,0 +1,505 @@
+﻿:root {
+    --text-color: #d8d5cf;
+    --accent-color: #4438a6;
+    --bg-color: #0c1114;
+    --button-highlight-color: rgba(68, 56, 166, 0.3);
+    --button-selected-color: rgba(68, 56, 166, 0.0);
+    --standard-border: 15px;
+    --tab-border: 10px;
+    --top-right: 15px 30px 15px 15px;
+}
+
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url('Philosopher-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Times New Roman', serif;
+}
+
+h1, h2 {
+    font-family: Philosopher;
+    display: grid;
+    text-align: right;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 6px var(--accent-color);
+    margin-top: 0.5%;
+    margin-right: 1%;
+}
+
+h2 {
+    font-size: 2rem;
+    text-shadow: 1.5px 1.5px 4px var(--accent-color);
+    margin-top: 0.1%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+}
+
+h3 {
+    font-family: Philosopher;
+    font-size: 2.5rem;
+    text-shadow: 1.5px 1.5px 4px var(--accent-color);
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+* {
+    margin: 0;
+    padding: 0.1%;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid var(--accent-color);
+    background-color: var(--bg-color);
+    border-radius: var(--tab-border);
+}
+
+.tab button {
+    background-color: var(--bg-color);
+    float: right;
+    border: 6px solid;
+    border-color: var(--bg-color);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px 40px!important;
+    font-family: Philosopher;
+    font-size: 2rem;
+    text-shadow: 1.5px 1.5px 4px var(--accent-color);
+    color: var(--text-color);
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    position: relative;
+}
+
+.tab button::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    bottom: -24px;
+    left: -15px;
+    right: 8px;
+    border: 1px solid var(--bg-color);
+    border-left-color: var(--accent-color);
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 7px;
+    filter: drop-shadow(-3px 0px 5px var(--accent-color));
+}
+
+.tab button:hover {
+  background-color: var(--button-highlight-color);
+}
+
+.tab button.active {
+    border-left-color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    background-color: var(--button-selected-color);
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--tab-border);
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    border-top: none;
+}
+
+.contentContainer {
+    max-width: 80%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.aboutMe {
+    margin: auto;
+    max-width: 95%;
+    display: grid;
+    grid-template-areas:
+        "header image"
+        "text image"
+        "socialstext socialsImgContainer";
+    grid-template-columns: 2fr 2.25fr;
+    gap: 3px;
+    padding: 5px;
+}
+
+.aboutMeHeader {
+    grid-area: header;
+    text-align: left;
+    font-family: Philosopher;
+    font-size: 2.5rem;
+    text-shadow: 1.5px 1.5px 4px var(--accent-color);
+    margin-top: 1.5%;
+    margin-left: 1%;
+}
+
+.leftText {
+    max-width: 90%;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+    grid-area: text;
+    text-align: left;
+}
+
+.profilePic {
+    border-radius: var(--top-right);
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+    grid-area: image;
+    margin-left: 4.2%;
+}
+
+.socialsText {
+    grid-area: socialstext;
+    text-align: left;
+    font-family: Philosopher;
+    font-size: 2.5rem;
+    text-shadow: 1.5px 1.5px 4px var(--accent-color);
+    margin-top: 10%;
+    margin-left: 1%;
+}
+
+.socialsContainer {
+    grid-area: socialsImgContainer;
+    display: grid;
+    grid-template-areas:
+        "linkedin itch email";
+    margin-bottom: 4%;
+}
+
+.appImage {
+    max-width: 50%;
+    filter: drop-shadow(0px 0px 3px var(--accent-color));
+    transition: transform 0.2s ease-in-out;
+    margin-left: 40%;
+    margin-top: 15%;
+}
+
+.linkedIn {
+    grid-area: linkedin;
+}
+
+.linkedIn:hover {
+    transform: scale(1.025);
+}
+
+.itch {
+    grid-area: itch;
+}
+
+.itch:hover {
+    transform: scale(1.025);
+}
+
+.email {
+    grid-area: email;
+}
+
+.email:hover {
+    transform: scale(1.025);
+}
+
+.projectContainer {
+    margin: auto;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    max-width: 95%;
+    display: grid;
+    row-gap: 75px;
+    grid-template-areas:
+        "projectHeader imageBox"
+        "projectSummary imageBox"
+        "imageBox2 contributions"
+        "imageBox2 contributions"
+        "conclusion socialsImgContainer";
+    grid-template-columns: 1.75fr 1.75fr;
+    padding: 5px;
+}
+
+.projectName {
+    grid-area: projectHeader;
+    text-align: left;
+    font-family: Philosopher;
+    font-size: 2.5rem;
+    text-shadow: 1.5px 1.5px 4px var(--accent-color);
+    margin-top: 1.5%;
+    margin-left: 1%;
+}
+
+.projectSummary {
+    grid-area: projectSummary;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: -15%;
+    margin-left: 1%;
+    max-width: 90%
+}
+
+.projectContributions {
+    grid-area: contributions;
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 12.5%;
+    align-self: center;
+}
+
+.projectImgBox1 {
+    grid-area: imageBox;
+    border-radius: var(--top-right);
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+    margin-top: 1.5%;
+    margin-left: -5%;
+    z-index: -1;
+    max-width: 110%;
+    align-self: center;
+}
+
+.projectImgBox1:hover {
+    transform: scale(1.025);
+}
+
+.projectImgBox2 {
+    grid-area: imageBox2;
+    border-radius: var(--top-right);
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+    margin-left: -5%;
+    z-index: -1;
+    max-width: 110%;
+}
+
+.projectImgBox2:hover {
+    transform: scale(1.025);
+}
+
+.conclusionText {
+    grid-area: conclusion;
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 1.5%;
+    margin-left: 1%;
+    max-width: 90%
+}
+
+.projectLinksContainer2x2 {
+    grid-area: socialsImgContainer;
+    display: grid;
+    grid-template-areas:
+        "ppItchPage vsLogo"
+        "unityLogo cSharplogo";
+    margin-bottom: 4%;
+}
+
+.projectLinksContainer2x3 {
+    grid-area: socialsImgContainer;
+    display: grid;
+    grid-template-areas:
+        "aaItchPage vsLogo fbLogo"
+        "unityLogo cSharplogo jsLogo";
+    margin-top: 10%;
+    margin-bottom: 4%;
+    margin-left: 10%;
+}
+
+.ppItchPage {
+    grid-area: ppItchPage;
+    max-width: 60%;
+    margin-top: -5%;
+    margin-left: 50%;
+    justify-self: center;
+}
+
+.ppItchPage:hover {
+    transform: scale(1.025);
+}
+
+.unityLogo {
+    grid-area: unityLogo;
+    max-width: 35%;
+    margin-left: 60%;
+    margin-top: 5%;
+    justify-self: center;
+}
+
+.unityLogo2x3 {
+    margin-left: 27.5%;
+    margin-top: 0%;
+}
+
+.unityLogo:hover {
+    transform: scale(1.025);
+}
+
+.vsLogo {
+    grid-area: vsLogo;
+    max-width: 40%;
+    margin-top: -8%;
+    margin-left: 27.75%;
+    justify-self: center;
+}
+
+.vsLogo:hover {
+    transform: scale(1.025);
+}
+
+.cSharpLogo {
+    grid-area: cSharpLogo;
+    max-width: 35%;
+    margin-left: 30%;
+    margin-top: 5%;
+    justify-self: center;
+}
+
+.cSharpLogo:hover {
+    transform: scale(1.025);
+}
+
+.aaItchPage {
+    grid-area: aaItchPage;
+    max-width: 60%;
+    margin-left: 20%;
+    margin-top: -25%;
+    justify-self: center;
+}
+
+.aaItchPage:hover {
+    transform: scale(1.025);
+}
+
+.fbLogo {
+    grid-area: fbLogo;
+    max-width: 50%;
+    margin-left: 20%;
+    margin-top: 5%;
+    justify-self: center;
+}
+
+.fbLogo:hover {
+    transform: scale(1.025);
+}
+
+.jsLogo {
+    grid-area: jsLogo;
+    max-width: 35%;
+    margin-left: 30%;
+    margin-top: 10%;
+    justify-self: center;
+}
+
+.jsLogo:hover {
+    transform: scale(1.025);
+}
+
+
+.cycleButton {
+    background: none;
+    font-size: 3rem;
+    border: none;
+    text-shadow: 0 0 15px var(--bg-color), 0 0 15px var(--accent-color);
+    align-self: center;
+    width: 10%;
+    height: 15%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.imgCycleButtonL {
+    justify-self: start;
+    margin-left: -5%;
+}
+
+.cycleButtonLight {
+    text-shadow: 0 0 15px var(--bg-color), 0 0 30px var(--text-color);
+    color: var(--accent-color);
+}
+
+.imgBox1Button {
+    grid-area: imageBox;
+}
+
+.imgBox2Button {
+    grid-area: imageBox2;
+}
+
+.imgCycleButtonL:hover {
+    transform: scale(1.3);
+}
+
+.imgCycleButtonR {
+    justify-self: end;
+    margin-right: -5%;
+}
+
+.imgCycleButtonR:hover {
+    transform: scale(1.3);
+}
+
+.imgbox{
+    display: grid;
+    height: 100%;
+}
+
+.bgHeader {
+    border-radius: 15px;
+    max-width: 99.75%;
+    max-height: 100vh;
+    margin: 0 auto;
+    filter: drop-shadow(0px 0px 5px var(--accent-color));
+    transition: filter 0.5s ease-in-out;
+}
+
+.bgHeader:hover {
+    filter: drop-shadow(0px 0px 15px var(--accent-color));
+}
+
+.profilePic:hover {
+    transform: scale(1.025);
+}
+
+.showcasePic {
+    width: 400px;
+    transition: width 0.2s;
+}
+
+.showcasePic:hover {
+    width: 405px;
+}
+
+.portfolioSwitchBox {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.portfolioSwitchBox:hover {
+    opacity: 1;
+}
+
+.portfolioGif {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolioGif:hover {
+    opacity: 1;
+}
